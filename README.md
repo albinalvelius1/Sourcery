@@ -2,7 +2,7 @@
 
 Sourcery is a local tool that automatically finds academic papers for your text and inserts `\cite{}` tags into it. It also generates a `.bib` file for the sources it finds.
 
-It uses a local LLM to do its best to extract keywords and verify sources, but uses standard Python string matching to insert the citations so your original text never gets rewritten or messed up by it.
+It employs a local LLM to do its best to extract keywords and verify sources, but uses standard Python string matching to insert the citations so your original text never gets rewritten or messed up by it.
 
 ## Requirements
 
