@@ -44,7 +44,6 @@ function App() {
     <div className="container">
       <header>
         <h1>SOURCERY</h1>
-        <div className="subtitle">Department of Automated Literature Retrieval & Citation</div>
       </header>
 
       <main>
@@ -83,7 +82,7 @@ function App() {
         {loading && (
           <div className="loader">
             <div className="spinner"></div>
-            <span>Querying academic databases and processing via LLM architecture...</span>
+            <span>Querying academic databases and processing...</span>
           </div>
         )}
 
