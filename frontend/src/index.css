@@ -1,0 +1,230 @@
+/* Base university aesthetic variables */
+:root {
+  --oxford-blue: #002147;
+  --crimson-red: #A31F34;
+  --paper-bg: #F9F8F6;
+  --text-dark: #1A1A1A;
+  --text-light: #5A5A5A;
+  --border-color: #E2DFD8;
+  
+  font-family: 'Georgia', 'Garamond', serif;
+  background-color: var(--paper-bg);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+}
+
+/* Header typography */
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  color: var(--oxford-blue);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--crimson-red);
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* Container styling */
+.container {
+  background: white;
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+/* Input area */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--oxford-blue);
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #FCFBF9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--oxford-blue);
+  box-shadow: 0 0 0 2px rgba(0, 33, 71, 0.1);
+}
+
+/* Button */
+button {
+  background-color: var(--oxford-blue);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #001530;
+}
+
+button:disabled {
+  background-color: var(--text-light);
+  cursor: not-allowed;
+}
+
+/* Results section */
+.results-section {
+  margin-top: 40px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+h2 {
+  color: var(--oxford-blue);
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.annotated-text {
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  background: white;
+  padding: 20px;
+  border-left: 4px solid var(--oxford-blue);
+  margin-bottom: 30px;
+}
+
+/* BibTeX block */
+.bibtex-block {
+  background-color: #2D2D2D;
+  color: #F8F8F2;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Strictness Slider */
+.slider-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #FCFBF9;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.slider-main-label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--oxford-blue);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--crimson-red);
+  cursor: pointer;
+  margin-top: -8px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-style: italic;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  color: var(--crimson-red);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(163, 31, 52, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--crimson-red);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
